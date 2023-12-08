@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/snow_white"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".DashboardFragment">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            android:background="@color/blue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_24"
+                android:background="@null"
+                android:layout_marginTop="28dp"
+                android:layout_marginStart="15dp"
+
+
+                android:contentDescription="back button" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ECLECTICS CHAMA"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_marginStart="15dp"
+
+                android:layout_marginTop="25dp"
+                android:drawablePadding="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/edt_shape_white"
+            android:backgroundTint="@color/white"
+            android:layout_marginEnd="15dp"
+            android:elevation="3dp"
+            app:cardCornerRadius="8dp"
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+
+
+
+                >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/categoryRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    />
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/categoryRecyclerView"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edt_shape_white"
+                    android:elevation="3dp"
+                    android:backgroundTint="@color/smoke_white"
+                    android:padding="5dp"
+                    >
+
+
+
+                    <TextView
+                        android:id="@+id/tvGroupDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Group Details"
+                        android:textColor="@color/blue00"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <View
+                        android:id="@+id/underline"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@android:color/holo_blue_bright"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvGroupDetails" />
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/tvContribution"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="contribution Frequency"
+                        app:layout_constraintTop_toBottomOf="@id/underline"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="4dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tvGroupMembers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Group Members"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/underline"
+                        android:layout_marginTop="4dp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                    <TextView
+                        android:id="@+id/tvContFrequencyNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contribution_frequency_amount"
+                        android:textColor="@color/black"
+                        app:layout_constraintTop_toBottomOf="@id/tvContribution"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="4dp"
+                        android:textStyle="bold"
+
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvGroupMembersNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/group_members"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvGroupMembers"
+
+                        />
+
+
+
+                    <TextView
+                        android:id="@+id/tvGroupBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvContFrequencyNumber"
+                        android:text="Group Balance"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvGroupBalanceNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/group_balance_amount"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        app:layout_constraintTop_toBottomOf="@id/tvGroupBalance"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="4dp"
+                        />
+
+
+
+                    <TextView
+                        android:id="@+id/tvPaybillBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvGroupMembersNumber"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="Paybill Account Balance"
+                        android:layout_marginTop="16dp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                    <TextView
+                        android:id="@+id/paybillBalanceNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvPaybillBalance"
+                        android:text="@string/paybill_account_balance"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"
+                        />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/tvUpcomingContribution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Upcoming Contributions"
+            app:layout_constraintTop_toBottomOf="@id/cardViewTop"
+            app:layout_constraintStart_toStartOf="@id/cardViewTop"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="view all"
+            app:layout_constraintTop_toBottomOf="@id/cardViewTop"
+            app:layout_constraintEnd_toEndOf="@id/cardViewTop"
+            android:layout_marginTop="20dp"
+            android:drawableEnd="@drawable/ic_arrow_forward_ios_24"
+            android:drawablePadding="5dp"
+            />
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contUpcomingContributions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="@id/cardViewTop"
+            app:layout_constraintEnd_toEndOf="@id/cardViewTop"
+            app:layout_constraintTop_toBottomOf="@id/tvUpcomingContribution"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edt_shape_white"
+            android:backgroundTint="@color/smoke_white"
+            android:elevation="4dp"
+
+
+            >
+
+
+            <TextView
+                android:id="@+id/tveclecticsChama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eclectics Chama"
+                android:textColor="@color/blue00"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+
+                />
+
+            <View
+                android:id="@+id/underline_two"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@android:color/holo_blue_bright"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tveclecticsChama" />
+
+
+            <TextView
+                android:id="@+id/tvdefaulted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Defaulted"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+
+                />
+
+
+            <!--<TextView
+                android:id="@+id/tvDueDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tveclecticsChama"
+                android:text="Due Date:"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvAmountDue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/amount_due"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/tvDueDate"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="4dp"
+                />
+
+
+
+            <TextView
+                android:id="@+id/tvPenaltyAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tveclecticsChama"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Penalty Amount"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                />
+
+
+
+            <TextView
+                android:id="@+id/tvpenaltyNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvPenaltyAmount"
+                android:text="@string/penalty_amount"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp"
+                />-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyUpcoming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/underline_two"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+
+
+            <Button
+                android:id="@+id/btnPayNow"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                app:layout_constraintTop_toBottomOf="@id/recyUpcoming"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="5dp"
+                android:text="PAY NOW"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_background"
+
+
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/tvRecentTransactions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Transactions"
+            app:layout_constraintTop_toBottomOf="@id/contUpcomingContributions"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/contUpcomingContributions"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            />
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/contUpcomingContributions"
+            app:layout_constraintEnd_toEndOf="@id/contUpcomingContributions"
+            app:layout_constraintTop_toBottomOf="@id/tvRecentTransactions"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        </TableLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

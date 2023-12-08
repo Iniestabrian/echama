@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Eclectics Chama</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_your_number">Add your number we will verify your number so we know you are a member</string>
+    <string name="are_you_registered">Are you Registered?</string>
+    <string name="register">Register</string>
+    <string name="please_provide_correct_details">Please provide correct details below and get registered in our mobile app</string>
+    <string name="surname">SURNAME</string>
+    <string name="other_names">OTHER NAMES</string>
+    <string name="email_adress">EMAIL ADRESS</string>
+    <string name="optional">*optional*</string>
+    <string name="terms">By creating an account your agree to our  Term &amp; Conditions as well as to our privacy policy</string>
+    <string name="contribution_frequency_amount">%s weekly</string>
+    <string name="group_balance_amount"> %s</string>
+    <string name="group_members">%d</string>
+    <string name="paybill_account_balance">%s</string>
+    <string name="amount_due">Amount Due: %s</string>
+    <string name="penalty_amount"> %s</string>
+    <string name="due_date">Due Date: %s</string>
+
+
+</resources>

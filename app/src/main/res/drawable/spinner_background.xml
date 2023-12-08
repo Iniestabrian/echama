@@ -1,0 +1,25 @@
+<!-- res/drawable/spinner_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <!-- Background for the Spinner -->
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" /> <!-- Set your desired background color -->
+            <corners android:radius="4dp" /> <!-- Adjust corner radius as needed -->
+        </shape>
+    </item>
+    <item android:right="8dp" android:gravity="end">
+        <!-- Down-facing arrow -->
+        <layer-list>
+            <item>
+                <rotate android:fromDegrees="180">
+                    <shape android:shape="rectangle">
+                        <stroke
+                            android:width="2dp"
+                            android:color="#000000" /> <!-- Set arrow color -->
+                        <size android:height="8dp" android:width="8dp" /> <!-- Set arrow size -->
+                    </shape>
+                </rotate>
+            </item>
+        </layer-list>
+    </item>
+</layer-list>
